@@ -1,0 +1,34 @@
+﻿@model UrlsAndRoutes.Models.Result
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routing</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="m-1 p-1">
+    <table class="table table-bordered table-striped table-sm">
+        <tr>
+            <th>Controlller:</th>
+            <td>@Model.Controller</td>
+        </tr>
+        <tr>
+            <th>Action:</th>
+            <td>@Model.Action</td>
+        </tr>
+        @foreach (string key in Model.Data.Keys)
+        {
+            <tr>
+                <th>@key:</th>
+                <td>@Model.Data[key]</td>
+            </tr>
+        }
+    </table>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
