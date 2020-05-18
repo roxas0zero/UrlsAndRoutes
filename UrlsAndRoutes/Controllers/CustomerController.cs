@@ -7,6 +7,7 @@ using UrlsAndRoutes.Models;
 
 namespace UrlsAndRoutes.Controllers
 {
+    [Route("app/[controller]/actions/[action]/{id:weekday?}")]
     public class CustomerController : Controller
     {
         public IActionResult Index()
